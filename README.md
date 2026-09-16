@@ -10,7 +10,7 @@ The project is **frontend-only**: no backend, authentication system, database or
 
 ## 📸 Demo
 
-![PULSE Personal Coaching Demo](./dist/assets/img/Screenshot%20from%202026-09-16%2000-14-56.png)
+![PULSE Personal Coaching Demo](./dist/assets/img/Screenshot%20from%202026-09-15%2023-56-06.png)
 ---
 
 ## ✨ Features
