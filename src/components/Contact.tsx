@@ -1,0 +1,7 @@
+import { useLanguage } from '../lib/language';
+import { ArrowUpRight, Mail, Phone, MapPin, Instagram } from 'lucide-react';
+export default function Contact({onBook}: {onBook: () => void}) {
+  const { t } = useLanguage();
+  const email=import.meta.env.VITE_COACH_EMAIL; const phone=import.meta.env.VITE_COACH_PHONE; const location=import.meta.env.VITE_COACH_LOCATION; const instagram=import.meta.env.VITE_COACH_INSTAGRAM;
+  return <section id="contact" className="contact-section container"><div><div className="section-kicker"><span className="red-line"/> {t("LET'S CONNECT")}</div><h2>{t("LESS THINKING.")}<br/><span className="red-text">{t("MORE MOVING.")}</span></h2><p>{t("Your next session starts with a conversation.")}</p><button className="button" onClick={onBook}>{t("BOOK A SESSION")} <ArrowUpRight size={18}/></button></div><div className="contact-details"><div><Mail/><span><small>{t("EMAIL")}</small>{email ? <a href={`mailto:${email}`}>{email}</a> : t("Available soon")}</span></div><div><Phone/><span><small>{t("PHONE")}</small>{phone ? <a href={`tel:${phone}`}>{phone}</a> : t("Available soon")}</span></div><div><MapPin/><span><small>{t("LOCATION")}</small>{location || t("Location agreed with your coach")}</span></div><div><Instagram/><span><small>{t("SOCIAL")}</small>{instagram && /^https:\/\/([a-z]+\.)?instagram\.com\//.test(instagram) ? <a href={instagram} target="_blank" rel="noreferrer">{t("Instagram")} <ArrowUpRight size={14}/></a> : t("Coming soon")}</span></div></div></section>;
+}
